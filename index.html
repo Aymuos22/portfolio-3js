@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Space FPS Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://unpkg.com/es-module-shims@1.8.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+        "PointerLockControls": "https://unpkg.com/three@0.152.2/examples/jsm/controls/PointerLockControls.js",
+        "GLTFLoader": "https://unpkg.com/three@0.152.2/examples/jsm/loaders/GLTFLoader.js",
+        "SkeletonUtils": "https://unpkg.com/three@0.152.2/examples/jsm/utils/SkeletonUtils.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="hud">
+    <div id="health-bar">
+      <div id="health-fill"></div>
+    </div>
+  </div>
+  <div id="crosshair"></div>
+  <div id="game-over">
+    <div>GAME OVER</div>
+    <button id="restart-btn">Restart</button>
+  </div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
