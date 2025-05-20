@@ -3,6 +3,14 @@ import { PointerLockControls } from 'PointerLockControls';
 import { GLTFLoader } from 'GLTFLoader';
 import * as SkeletonUtils from 'SkeletonUtils';
 
+
+// Block non-desktop devices
+if (/Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|BlackBerry|webOS|Windows Phone/i.test(navigator.userAgent)) {
+    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#111;color:#fff;font-size:2em;text-align:center;">This site is only available on desktop devices.<br>Please visit from a computer.</div>';
+    throw new Error('Blocked on mobile/tablet');
+  }
+  
+
 // --- Audio ---
 const shootSound = new Audio('assets/shoot.mp3');
 const footstepSound = new Audio('assets/footsteps.mp3');
